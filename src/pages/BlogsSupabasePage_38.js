@@ -25,7 +25,7 @@ const BlogsSupabasePage_38 = () => {
     <>
       <section className="blogs">
         <div className="section-title">
-          <h2>Fetch Blogs From Node Server</h2>
+          <h2>Fetch Blogs From Supabase</h2>
           <p>
             {name} {id}
           </p>
