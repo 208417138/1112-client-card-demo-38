@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Wrapper from "../assets/wrapper/Blogs_38";
 
 import { supabase } from "../db/clientSupabase";
 
@@ -22,7 +23,7 @@ const BlogsSupabasePage_38 = () => {
   }, []);
 
   return (
-    <>
+    <Wrapper>
       <section className="blogs">
         <div className="section-title">
           <h2>Fetch Blogs From Supabase</h2>
@@ -49,7 +50,7 @@ const BlogsSupabasePage_38 = () => {
           })}
         </div>
       </section>
-    </>
+    </Wrapper>
   );
 };
 

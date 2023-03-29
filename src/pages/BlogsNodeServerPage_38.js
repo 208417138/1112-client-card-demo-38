@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios';
+import Wrapper from "../assets/wrapper/Blogs_38";
 
 let api_url = `https://one112-server-card-demo-38.onrender.com/api/card2_38`;
 const BlogsNodeServerPage_38 = () => {
@@ -22,7 +23,7 @@ const BlogsNodeServerPage_38 = () => {
   },[])
 
   return(
-    <>
+    <Wrapper>
     <section className="blogs">
         <div className="section-title">
           <h2>
@@ -55,7 +56,7 @@ const BlogsNodeServerPage_38 = () => {
           })}
         </div>
       </section>
-    </>
+    </Wrapper>
   )
 };
 

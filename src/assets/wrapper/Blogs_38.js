@@ -1,21 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;  
-}
+import styled from 'styled-components'
 
-
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background: var(--grey-light);
-  color: var(--grey-dark);
-  font-size: 12px;
-  
-}
-
-
-
-.blogs {
+const Wrapper = styled.div`.blogs {
     --primary: #645cff;
     --primary-dark: #3c3799;
     --grey-light: #f1f5f9;
@@ -119,11 +104,6 @@ body {
         color: var(--primary-dark);
         letter-spacing: 1px;
     }
-}
+}`
 
-
-
-
-
- 
-
+export default Wrapper
