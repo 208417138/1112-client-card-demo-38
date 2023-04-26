@@ -1,28 +1,26 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios';
 import Wrapper from "../assets/wrapper/Blogs_38";
-import { useDemoContext_38 } from "../context/DemoContext_38";
 
-// let api_url = `https://one112-server-card-demo-38.onrender.com/api/card2_38`;
+let api_url = `https://one112-server-card-demo-38.onrender.com/api/card2_38`;
 const BlogsNodeServerPage_38 = () => {
-  // const [name, setName] = useState('LICHUN LIN');
-  // const [id, setId] = useState('208417138');
-  // const [data, setData] = useState([]);
-  const {pName, pid, blogs2} = useDemoContext_38()
+  const [name, setName] = useState('LICHUN LIN');
+  const [id, setId] = useState('208417138');
+  const [data, setData] = useState([]);
 
-  // const fetchBlogDataFromNodeServer = async() => {
-  //   try{
-  //       const results = await axios.get(api_url);
-  //       console.log('results', results);
-  //       setData(results.data);
-  //   }catch(error){
-  //       console.log('error');
-  //   }
-  // }
+  const fetchBlogDataFromNodeServer = async() => {
+    try{
+        const results = await axios.get(api_url);
+        console.log('results', results);
+        setData(results.data);
+    }catch(error){
+        console.log('error');
+    }
+  }
 
-  // useEffect(()=>{
-  //   fetchBlogDataFromNodeServer();
-  // },[])
+  useEffect(()=>{
+    fetchBlogDataFromNodeServer();
+  },[])
 
   return(
     <Wrapper>
@@ -31,10 +29,10 @@ const BlogsNodeServerPage_38 = () => {
           <h2>
             Fetch Blogs From Node Server
           </h2>
-          <p>{pName} {pid}</p>
+          <p>{name} {id}</p>
         </div>
         <div className="blogs-center2">
-          {blogs2.map((item) => {
+          {data.map((item) => {
             const { id, img, remote_img, category, title, desc } = item;
             return (
               <article key={id} className="blog">

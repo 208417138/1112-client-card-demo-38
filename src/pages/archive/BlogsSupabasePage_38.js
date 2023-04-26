@@ -1,27 +1,26 @@
 import React, { useState, useEffect } from "react";
 import Wrapper from "../assets/wrapper/Blogs_38";
-import { useDemoContext_38 } from "../context/DemoContext_38";
 
 import { supabase } from "../db/clientSupabase";
 
 const BlogsSupabasePage_38 = () => {
-  // const [name, setName] = useState("LICHUN LIN");
-  // const [id, setId] = useState("208417138");
-  // const [data, setData] = useState([]);
-  const {pName, pid, blogs} = useDemoContext_38();
-  // const fetchBlogDataFromSupabase = async () => {
-  //   try {
-  //     let {data, error} = await supabase.from(`card_38`).select('*')
-  //     console.log('results', data);
-  //     // setData(data);
-  //   } catch (error) {
-  //     console.log("error");
-  //   }
-  // };
+  const [name, setName] = useState("LICHUN LIN");
+  const [id, setId] = useState("208417138");
+  const [data, setData] = useState([]);
 
-  // useEffect(() => {
-  //   fetchBlogDataFromSupabase();
-  // }, []);
+  const fetchBlogDataFromSupabase = async () => {
+    try {
+      let {data, error} = await supabase.from(`card_38`).select('*')
+      console.log('results', data);
+      setData(data);
+    } catch (error) {
+      console.log("error");
+    }
+  };
+
+  useEffect(() => {
+    fetchBlogDataFromSupabase();
+  }, []);
 
   return (
     <Wrapper>
@@ -29,11 +28,11 @@ const BlogsSupabasePage_38 = () => {
         <div className="section-title">
           <h2>Fetch Blogs From Supabase</h2>
           <p>
-            {pName} {pid}
+            {name} {id}
           </p>
         </div>
         <div className="blogs-center2">
-          {blogs.map((item) => {
+          {data.map((item) => {
             const { id, img, remote_img, category, title, desc } = item;
             return (
               <article key={id} className="blog">
@@ -44,7 +43,7 @@ const BlogsSupabasePage_38 = () => {
                   </span>
                   <h3>{title}</h3>
                   <p>{desc}</p>
-                  <a to="#">read more</a>
+                  <a href="#">read more</a>
                 </div>
               </article>
             );
