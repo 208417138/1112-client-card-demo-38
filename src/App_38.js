@@ -20,10 +20,13 @@ import MenuNodeServerPage_xx from './pages/mid_xx/MenuNodeServerPage_xx';
 
 import MenuNodeServerContextPage_xx from './pages/mid_xx/MenuNodeServerContextPage_xx';
 import Navbar from "./components/NavbarMegaResp_xx";
+import CrownStaticPage_38 from "./pages/local/CrownStaticPage_38";
+import CrownSupabase_38 from "./pages/supabase/CrownSupabase_38";
+import ShopSupabase_38 from "./pages/supabase/ShopSupabase_38";
 function App_38() {
   return (
     <BrowserRouter>
-    <Navbar/>
+    {/* <Navbar/> */}
       <Routes>
         <Route path='/' element={<HomePage_38/>}/>
         <Route path='card_38' element={<BlogsStaticPage_38/>}/>
@@ -37,6 +40,9 @@ function App_38() {
           element={<ProductsNodeServerContextPage_xx />}
         />
         <Route path='supa_menu_38' element={<SupaMenuPage/>}/>
+        <Route path='static_crown2_38' element={<CrownStaticPage_38/>}/>
+        <Route path='supa_crown2_38' element={<CrownSupabase_38/>}/>
+        <Route path='supa_shop2_38' element={<ShopSupabase_38/>}/>
       </Routes>
     </BrowserRouter>
   );
