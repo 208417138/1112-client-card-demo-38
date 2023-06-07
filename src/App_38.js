@@ -6,6 +6,7 @@ import BlogsLocalJsonPage from "./pages/BlogsLocalJsonPage_38";
 import BlogsNodeServerPage_38 from "./pages/BlogsNodeServerPage_38";
 import BlogsSupabasePage_38 from "./pages/BlogsSupabasePage_38";
 import ProductsStaticPage_xx from './pages/midprep_xx/ProductsStaticPage_xx';
+import SupaMenuPage from './pages/SupaMenuPage';
 
 import ProductsNodeServerPage_xx from './pages/midprep_xx/ProductsNodeServerPage_xx';
 
@@ -35,6 +36,7 @@ function App_38() {
           path='/midp_node_context_xx'
           element={<ProductsNodeServerContextPage_xx />}
         />
+        <Route path='supa_menu_38' element={<SupaMenuPage/>}/>
       </Routes>
     </BrowserRouter>
   );
